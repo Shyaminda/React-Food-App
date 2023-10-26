@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
-import './Register.css'; // Import the CSS file
 import axios from 'axios';
+import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import './Register.css'; // Import the CSS file
 
 const Register = () => {
-
+  const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
     username: '',
@@ -71,7 +73,8 @@ const Register = () => {
       // .then(result=>console.log(result))
       // .catch(err=>console.log(err));
       .then(response => {console.log(response.data);
-        clearForm();})
+        clearForm();
+        navigate("/");})
       .catch(error => console.log(error));
     }
   };
@@ -148,9 +151,9 @@ const Register = () => {
           Sign Up
         </button>
 
-        <p className="signInLink">
-          Already have an account? <a href="#">Sign In</a>
-        </p>
+        <p className="signUpLink">
+                Already have an account? <Link to="/login">Sign Up</Link>
+            </p>
       </form>
     </div>
   );

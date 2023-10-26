@@ -11,6 +11,7 @@ import Laurels from './Laurels/Laurels';
 import Gallery from './Gallery/Gallery';
 import FindUs from './Findus/FindUs';
 import Footer from './Footer/Footer';
+import Login from '../container/Login-Singup/Login/Login.jsx';
 import './App.css';
 
 function MainContent() {
@@ -37,6 +38,7 @@ function App() {
         <Routes>
           <Route path="/" element={<MainContent />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/login" element={<Login />} />
         </Routes>
       </BrowserRouter>
     </div>
