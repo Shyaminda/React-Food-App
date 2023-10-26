@@ -1,5 +1,5 @@
-import images from './images';
+import images from './images.js';
 import meal from '../assets/meal.mp4';
-import data from './data';
+import data from './data.js';
 
-export { images, meal, data };
+export default { images, meal, data };

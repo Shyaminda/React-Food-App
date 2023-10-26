@@ -1,10 +1,12 @@
 import React from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { MdOutlineRestaurantMenu } from "react-icons/md";
+import { Link } from "react-router-dom";
 import images  from "../../constants/images";
 import "./Navbar.css";
 
 function NavBar(){
+    
     const [togMenu,setTogMenu]=React.useState(false);
 
     // function toggleMenu(){
@@ -81,9 +83,10 @@ function NavBar(){
                 </li>
             </ul> */}
             <div className="app__navbar-login">
-                <a href="#login" className="p__opensans">
-                Log In / Registration
-                </a>
+            <Link to="/register" className="p__opensans">
+                  Log In / Registration
+            </Link>
+
                 <div />
                 <a href="/" className="p__opensans">
                     Book Table

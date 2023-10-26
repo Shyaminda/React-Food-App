@@ -1,7 +1,8 @@
 import React from "react";
 import SubHeading from "../../container/SubHeading/SubHeading";
 import MenuItem from "../../container/MenuItem/MenuItem"
-import {data,images} from "../../constants";
+import data from "../../constants/data";
+import images from "../../constants/images";
 import "./SpecialMenu.css";
 
 function Swmenu(wine,index){
