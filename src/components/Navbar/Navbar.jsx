@@ -88,9 +88,9 @@ function NavBar(){
             </Link>
 
                 <div />
-                <a href="/" className="p__opensans">
+                <Link to="/tableBooking" className="p__opensans">
                     Book Table
-                </a>
+                </Link>
             </div>
             <div className="app__navbar-smallscreen">
                 <GiHamburgerMenu 

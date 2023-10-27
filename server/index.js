@@ -1,8 +1,8 @@
 import Express  from "express";
 import mongoose from "mongoose";
 import cors from 'cors';
-import userModel from "./models/UserDB.js";
-import tableModel from "./models/TableDB.js";
+import {userModel,tableModel} from "./models/UserDB.js";
+
 
 const corsOptions = {
     origin: 'http://localhost:3000', // Allow requests from this origin
