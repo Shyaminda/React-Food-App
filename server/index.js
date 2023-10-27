@@ -2,6 +2,7 @@ import Express  from "express";
 import mongoose from "mongoose";
 import cors from 'cors';
 import userModel from "./models/UserDB.js";
+import tableModel from "./models/TableDB.js";
 
 const corsOptions = {
     origin: 'http://localhost:3000', // Allow requests from this origin
@@ -47,9 +48,16 @@ app.post("/register", (req, res)=> {
         console.error(err);
         res.status(500).json({error: "Internal server error"});
     });
-
-    
 });
+
+app.post("/tableBooking", (req, res)=> {
+    tableModel.create(req.body)
+    .then(table=>res.json(table))
+    .catch(err=>{
+        console.error(err);
+        res.status(500).json({error: "Internal server error"});
+    });
+})
 
 app.listen(3001, ()=> {
     console.log("Server started on port 3001");});
